@@ -12,6 +12,7 @@ if not os.path.exists(path):
     os.mkdir(path)
 
 # Search for all dng files
+print("Följande filer flyttas till foldern ", "./",path, sep='')
 for f_name_dng in os.listdir("."):
     if f_name_dng.endswith('.DNG'):
         pos = 0
@@ -25,3 +26,4 @@ for f_name_dng in os.listdir("."):
             if pos == len(os.listdir(".")):
                 print("Motsvarande JPG fil till", f_name_dng,"existerar inte")
                 os.rename('./'+f_name_dng, './remove/'+f_name_dng)
+                
